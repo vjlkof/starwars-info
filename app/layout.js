@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import NavBar from "./components/navbar/NavBar.jsx";
+import NavBar from "@/app/components/NavBar/NavBar.jsx";
 import styles from "./layout.module.css";
-import { FavProvider } from "./contexts/FavContext.js";
+import { FavProvider } from "@/app/contexts/FavContext.js";
 
 const inter = Inter({ subsets: ["latin"] });
 
