@@ -1,0 +1,14 @@
+.cardList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 4rem;
+}
+
+@media (max-width: 767px) {
+  .cardList {
+    margin-top: 2rem;
+  }
+}

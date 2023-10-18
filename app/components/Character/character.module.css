@@ -1,0 +1,37 @@
+.search {
+  align-self: flex-end;
+  margin-top: 2rem;
+}
+
+.pageContainer {
+  display: grid;
+  grid-template-columns: 0.6fr 3fr;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .content {
+    margin-left: 0px;
+  }
+}

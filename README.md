@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Things to be covered in this challange
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Objetivo
 
-## Learn More
+Construir una web full-stack que tome información de la API pública de Star Wars y sea visualizada de forma user-friendly. El backend deberá estar desarrollado en Node.js usando Express o Nest.js, el Frontend debería estar implementado en Next.js.
 
-To learn more about Next.js, take a look at the following resources:
+[DONE] **Obligatorio:** Recorda abrir un repositorio público (puede ser Github, Gitlab, Bitbucket…)
+[] **Nice to Have:** Deseable que el proyecto esté deployado en un server (gratuito)
+### 🤖 Backend Development:
+[DONE] - Implementar una RESTful API endpoint que tome la información de la API de Star Wars (**https://swapi.dev/**).
+[DONE] - Crear endpoints para obtener información de:
+[DONE]     - **Personajes 👨‍👩‍👧‍👧**
+[DONE]     - **Peliculas 📹**
+[DONE]     - **Naves 🚀**
+[DONE]     - **Planetas 🪐.**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🧑‍🎨 Frontend Development:
+[] - Diseñar y desarrollar una interfaz responsive que pueda mostrar la información del Backend.
+[DONE] - Mostrar una lista de las categorías disponibles como ejes de navegación y mostrar la información obtenida del backend.
+[DONE] - Se recomienda implementar búsquedas.
+[DONE] - Se recomienda implementar filtros.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 💡 Features adicionales (elegir al menos uno):
 
-## Deploy on Vercel
+[DONE] - Implementar un feature para mostrar toda la información de un item especifico (caracteristicas de un personaje, sinopsis de una pelicula, etc.)
+[] - Añadir la habilidad de tener un bookmark o seleccionar favoritos en items específicos y guardar esa información.
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Comments:
+in mobile, favorites should be another page.

@@ -1,0 +1,33 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #333;
+  border-radius: 5px;
+  z-index: 999;
+  transition: 0.3s;
+  top: 60px;
+  left: calc(100% - 260px);
+  width: 220px;
+}
+
+.rowLine {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.favButton {
+  font-size: 18px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  background-color: #050505;
+  border: none;
+  padding: 5px;
+  font-size: 12px;
+}
