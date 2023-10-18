@@ -11,7 +11,7 @@ export default async function Peliculas() {
   return (
     <>
       <PageData
-        title="Peliculas"
+        title="Películas"
         resource="movies"
         backendData={movies}
         url={MOVIES_SERVICE}

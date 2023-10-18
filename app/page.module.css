@@ -19,6 +19,15 @@
   height: 80vh;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 80vh;
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .information {
     width: unset;
@@ -26,6 +35,10 @@
   }
 
   .loading {
+    height: 60vh;
+  }
+
+  .error {
     height: 60vh;
   }
 }

@@ -15,7 +15,7 @@ export default function Home() {
         />
       </div>
       <p className={styles.information}>
-        Esta página es una UI que hace de wrapper de la swapi API. Esta te
+        Esta página es una UI que sirve de wrapper de la swapi API. Esta te
         permite buscar, filtrar y guardar favoritos de personajes, películas,
         naves y planetas de todas las películas cargadas en dicha API.
       </p>

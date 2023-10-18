@@ -23,6 +23,7 @@ export default function PageData({
         <Search
           url={url}
           resource={resource}
+          originalData={backendData}
           setData={setData}
           setParam={setParam}
         />
