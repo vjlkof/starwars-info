@@ -1,13 +1,17 @@
 "use client";
 import { useState } from "react";
 import styles from "./loadMore.module.css";
+import { urlBuilder } from "@/app/utils/urlBuilder.js";
 import { getData } from "@/app/utils/apiCall.js";
 
-export default function LoadMore({ url, param, resource, setData, setParam }) {
+export default function LoadMore({ url, param, service, setData, setParam }) {
   async function loadMoreData() {
     setLoading(true);
     try {
-      const { next: nextPage, results } = await getData(resource, url, param);
+      const { next: nextPage, results } = await getData(
+        service,
+        urlBuilder(service, null, param)
+      );
       setData((data) => [...data, ...results]);
       setParam(nextPage);
     } catch (error) {

@@ -9,10 +9,11 @@ import SideBar from "@/app/components/SideBar/SideBar.jsx";
 
 export default function Character({
   title,
-  resource,
+  service,
   charactersData,
   url,
   paramData,
+  route,
 }) {
   const [characters, setCharacters] = useState(charactersData);
   const [param, setParam] = useState(paramData);
@@ -24,7 +25,7 @@ export default function Character({
       <div className={styles.search}>
         <Search
           url={url}
-          resource={resource}
+          service={service}
           originalData={charactersData}
           setData={setCharacters}
           setParam={setParam}
@@ -37,11 +38,11 @@ export default function Character({
         />
         <div className={styles.content}>
           <div className={styles.dataContainer}>
-            <CardList path={title.toLowerCase()} items={visualizedCharacters} />
+            <CardList route={route} items={visualizedCharacters} />
             <LoadMore
               url={url}
               param={param}
-              resource={resource}
+              service={service}
               setData={setCharacters}
               setParam={setParam}
             />

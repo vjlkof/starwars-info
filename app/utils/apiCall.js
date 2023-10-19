@@ -1,13 +1,10 @@
 import axios from "axios";
 
-export async function getData(resource, url, page = null) {
+export async function getData(service, url) {
   try {
-    if (page) {
-      url = url + "/?" + page;
-    }
     const response = (await axios.get(url)).data;
     return response;
   } catch (e) {
-    throw new Error(`Problem getting ${resource}`);
+    throw new Error(`Problem getting ${service}`);
   }
 }

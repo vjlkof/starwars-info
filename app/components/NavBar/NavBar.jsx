@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./navBar.module.css";
 import Tooltip from "@/app/components/Tooltip/Tooltip.jsx";
+import { LABELS, PAGINAS } from "@/app/constants/constants.js";
 
 export default function NavBar() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -61,16 +62,16 @@ export default function NavBar() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/personajes">Personajes</Link>
+            <Link href={`/${PAGINAS.CHARACTERS}`}>{LABELS.CHARACTERS}</Link>
           </li>
           <li>
-            <Link href="/peliculas">Películas</Link>
+            <Link href={`/${PAGINAS.MOVIES}`}>{LABELS.MOVIES}</Link>
           </li>
           <li>
-            <Link href="/naves">Naves</Link>
+            <Link href={`/${PAGINAS.STARSHIPS}`}>{LABELS.STARSHIPS}</Link>
           </li>
           <li>
-            <Link href="/planetas">Planetas</Link>
+            <Link href={`/${PAGINAS.PLANETS}`}>{LABELS.PLANETS}</Link>
           </li>
         </ul>
         <div

@@ -8,10 +8,11 @@ import Search from "@/app/components/Search/Search.jsx";
 
 export default function PageData({
   title,
-  resource,
+  service,
   backendData,
   url,
   paramData,
+  route,
 }) {
   const [data, setData] = useState(backendData);
   const [param, setParam] = useState(paramData);
@@ -22,18 +23,18 @@ export default function PageData({
       <div className={styles.search}>
         <Search
           url={url}
-          resource={resource}
+          service={service}
           originalData={backendData}
           setData={setData}
           setParam={setParam}
         />
       </div>
       <div className={styles.dataContainer}>
-        <CardList path={title.toLowerCase()} items={data} />
+        <CardList route={route} items={data} />
         <LoadMore
           url={url}
           param={param}
-          resource={resource}
+          service={service}
           setData={setData}
           setParam={setParam}
         />

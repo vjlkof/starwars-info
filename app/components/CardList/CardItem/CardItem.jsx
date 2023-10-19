@@ -4,7 +4,7 @@ import styles from "./cardItem.module.css";
 import { useRouter } from "next/navigation";
 import { useFavContext } from "@/app/contexts/FavContext.js";
 
-export default function CardItem({ item, path }) {
+export default function CardItem({ item, route }) {
   const router = useRouter();
 
   const { favorites, updateFavorites } = useFavContext();
@@ -12,7 +12,7 @@ export default function CardItem({ item, path }) {
 
   const handleCardClick = async () => {
     setLoading(true);
-    await router.push(`/${path}/${item.id}`);
+    await router.push(`/${route}/${item.id}`);
   };
   return (
     <article className={loading ? styles.cardLoading : styles.card}>

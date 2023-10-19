@@ -4,11 +4,12 @@ import Image from "next/image";
 import styles from "./search.module.css";
 import searchIcon from "@/public/search.svg";
 import closeIcon from "@/public/close.svg";
+import { urlBuilder } from "@/app/utils/urlBuilder.js";
 import { getData } from "@/app/utils/apiCall.js";
 
 export default function Search({
   url,
-  resource,
+  service,
   originalData,
   setData,
   setParam,
@@ -25,7 +26,10 @@ export default function Search({
   async function backendSearch(param = undefined) {
     setLoading(true);
     try {
-      const { next: nextPage, results } = await getData(resource, url, param);
+      const { next: nextPage, results } = await getData(
+        service,
+        urlBuilder(service, null, param)
+      );
       setData([...results]);
       setParam(nextPage);
     } catch (error) {
