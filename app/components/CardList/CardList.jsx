@@ -5,9 +5,13 @@ import CardItem from "./CardItem/CardItem.jsx";
 export default function CardList({ route, items }) {
   return (
     <div className={styles.cardList}>
-      {items.map((item, index) => (
-        <CardItem key={index} item={item} route={route} />
-      ))}
+      {!items.length ? (
+        <h3>No hay resultados</h3>
+      ) : (
+        items.map((item, index) => (
+          <CardItem key={index} item={item} route={route} />
+        ))
+      )}
     </div>
   );
 }

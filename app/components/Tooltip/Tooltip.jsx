@@ -7,18 +7,22 @@ export default function Tooltip() {
 
   return (
     <div className={styles.listContainer}>
-      {favorites.map((item, index) => (
-        <div key={index} className={styles.rowLine}>
-          <strong>{item} </strong>
-          <button
-            className={styles.favButton}
-            type="button"
-            onClick={() => updateFavorites(item)}
-          >
-            {favorites.includes(item) ? "❤️" : "🤍"}
-          </button>
-        </div>
-      ))}
+      {!favorites.length ? (
+        <p>No hay favoritos</p>
+      ) : (
+        favorites.map((item, index) => (
+          <div key={index} className={styles.rowLine}>
+            <strong>{item} </strong>
+            <button
+              className={styles.favButton}
+              type="button"
+              onClick={() => updateFavorites(item)}
+            >
+              {favorites.includes(item) ? "❤️" : "🤍"}
+            </button>
+          </div>
+        ))
+      )}
     </div>
   );
 }
